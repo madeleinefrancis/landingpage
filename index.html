@@ -11,24 +11,10 @@
 				Web designer and programmer
 			</div>
 			<div id="content-wrapper">
-				<div id="first-tile" class="content active">
-					Web designer and programmer
-				</div>
-				<div id="provide-tile" class="hidden content">
-					What I provide: <br>
+				<div id="provide-tile" class="content">
+					I provide: <br>
 					unique, highly custom websites<br>
-					integrations and hosting, for the best price possible every time
-				</div>
-				<div id="likes-tile" class="hidden content">
-					What I like: <br>
-					minimalism <br>
-					emphasis on aesthetics <br>
-					keeping it fresh - shrugging off typical, tired design<br>
-				</div>
-				<div id="next-button-wrapper"> 
-					<button onclick="nextTile()">
-						Next
-					</button>
+					integrations and hosting, for the best price possible
 				</div>
 			</div>
 			<div id="contact-wrapper">
@@ -37,17 +23,4 @@
 			</div>
 		</div>
 	</body>
-	<script type="text/javascript">
-		function nextTile() {
-			var curTile = document.getElementsByClassName("active")[0];
-			curTile.classList.add("hidden");
-			curTile.classList.remove("active");
-			var nextID = curTile.id == "first-tile" ? "provide-tile" : 
-						 curTile.id == "provide-tile" ? "likes-tile" :
-						 								"first-tile";
-			var nextTile = document.getElementById(nextID);
-			nextTile.classList.remove("hidden");
-			nextTile.classList.add("active");
-		}
-	</script>
 </html>

@@ -19,7 +19,11 @@
 	--chino: #cecba2;
 }
 
-html, body {
+html {
+	height: 100%
+}
+
+body {
 	height: 100%;
 	background-color: #bdafb0;
     font-family: SilkSerif;
@@ -34,7 +38,7 @@ html, body {
 }
 
 .title {
-	
+	font-size: 21px;
 }
 
 .page-wrapper {
@@ -51,8 +55,7 @@ html, body {
 }
 
 #content-wrapper {
-	position: relative;
-	background-image: url(assets/IMG_0551.jpg);
+	background-image: url(assets/rockBandW.jpg);
 	background-size: 1000px;
     width: 50vw;
     color: white;
@@ -68,7 +71,6 @@ html, body {
 
 #contact-wrapper {
 	text-align: center;
-    margin-top: -18px;
     z-index: 100;
     font-size: 26px;
     color: white;
