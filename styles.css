@@ -81,10 +81,6 @@ html, body {
 	display: none;
 }
 
-.active {
-
-}
-
 .page-wrapper {
     display: flex;
     justify-content: center;
@@ -104,6 +100,12 @@ html, body {
   100% {color: white;}
 }
 
+.active {
+	animation-name: textAppear;
+  	animation-duration: 1.3s;
+}
+
+
 #content-wrapper {
 	position: relative;
     width: 50vw;
@@ -111,7 +113,7 @@ html, body {
     height: 50vh;
     text-align: center;
 	animation-name: textAppear;
-  	animation-duration: 2s;
+  	animation-duration: 1.5s;
 }
 
 #contact-wrapper {
@@ -121,7 +123,7 @@ html, body {
     font-size: 20px;
     color: white;
 	animation-name: textAppear;
-  	animation-duration: 2s;
+  	animation-duration: 1.5s;
 }
 
 @media only screen and (max-width: 600px) {
