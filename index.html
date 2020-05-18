@@ -6,10 +6,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
+		<div class="sun-back">
+			<div class="dot-rest dot"></div>
+		</div>
+		<div id="sun" class="sun-one">
+		 	<div id="dot1" class="dot" onclick="moveMenu(event)"></div>
+		 	<div id="dot2" class="dot" onclick="moveMenu(event)"></div>
+		 	<div id="dot3" class="dot" onclick="moveMenu(event)"></div>
+		</div>
 		<div class="page-wrapper">
-			<div class="title">
-				Web designer and programmer
-			</div>
 			<div id="content-wrapper">
 				<div id="first-tile" class="content active">
 					Web designer and programmer
@@ -25,19 +30,35 @@
 					emphasis on aesthetics <br>
 					keeping it fresh - shrugging off typical, tired design<br>
 				</div>
-				<div id="next-button-wrapper"> 
-					<button onclick="nextTile()">
-						Next
-					</button>
+				<div id="contact-tile" class="hidden content">
+					reach me at <br>
+					contact@madeleinefrancis.com
 				</div>
 			</div>
 			<div id="contact-wrapper">
-				email at <br>
+				reach me at <br>
 				contact@madeleinefrancis.com
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
+		function moveMenu(e) {
+			var curTile = document.getElementsByClassName("active")[0];
+			curTile.classList.add("hidden");
+			curTile.classList.remove("active");
+
+			var sun = document.getElementById("sun");
+			sun.classList.remove("sun-one");
+			sun.classList.add("sun-two")
+
+			var nextID = curTile.id == "first-tile" ? "provide-tile" : 
+			 curTile.id == "provide-tile" ? "likes-tile" :
+			 								"first-tile";
+			var nextTile = document.getElementById(nextID);
+			nextTile.classList.remove("hidden");
+			nextTile.classList.add("active");
+		}
+
 		function nextTile() {
 			var curTile = document.getElementsByClassName("active")[0];
 			curTile.classList.add("hidden");

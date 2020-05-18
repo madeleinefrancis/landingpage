@@ -1,6 +1,6 @@
 @font-face {
-  font-family:"DitaSweet";
-  src: url("assets/Dita-Sweet.otf") format("truetype");
+  font-family:"MPLUS1p";
+  src: url("assets/MPLUS1p-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -8,22 +8,89 @@
   src: url("assets/SilkSerif-Medium.ttf") format("truetype");
 }
 
-:root {
-	--summer-green: #8eb8a2;
-	--bay-leaf: #83b195;
-	--waterloo: #8180a0;
-	--kimberly: #7f7ca7;
-	--tall-poppy: #bb2531;
-	--cadillac: #b65066;
-	--tana: #d8d9ba;
-	--chino: #cecba2;
+@font-face {
+  font-family:"Manofa-Regular";
+  src: url("assets/Manofa-Regular.ttf") format("truetype");
 }
 
 html, body {
 	height: 100%;
 	background-color: #bdafb0;
-    font-family: SilkSerif;
+    font-family: MPLUS1p;
+    font-family: Manofa-Regular;
 }
+
+.dot{
+    position:absolute;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+}
+
+#dot1 {
+    background: #572124;
+    top:0;
+    left:0;
+    transform: translate(-50%, -50%);
+}
+
+#dot2 {
+    background: #b45859;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+#dot3 {
+    background: #8d4242;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot-rest {
+	background-color: white;
+	width: 30px;
+	height: 30px;
+	top: 0%;
+	left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.sun-back {
+    width: 60px;
+    height: 60px;
+    top:50px;
+    left:50px;	
+    position:absolute;
+}
+
+#sun{
+	display:inline-block;
+    width: 60px;
+    height: 60px;
+    position:absolute;
+    top:50px;
+    left:50px;
+    background-color: black;
+    transition: transform 1s;
+    transition-timing-function: ease-in;
+}
+
+.sun-one {
+    -webkit-animation-iteration-count:1;
+    -webkit-animation-timing-function:linear;
+    -webkit-animation-name:orbit;
+    -webkit-animation-duration:1s;
+}
+
+.sun-two {
+	-webkit-transform:rotate(90deg)
+}
+
+@-webkit-keyframes orbit {
+from { -webkit-transform:rotate(0deg) } 
+to { -webkit-transform:rotate(360deg) } }
 
 .hidden {
 	display: none;
@@ -31,10 +98,6 @@ html, body {
 
 .active {
 
-}
-
-.title {
-	
 }
 
 .page-wrapper {
@@ -52,18 +115,12 @@ html, body {
 
 #content-wrapper {
 	position: relative;
-	background-image: url(assets/IMG_0551.jpg);
-	background-size: 1000px;
+/*	background-image: url(assets/IMG_0551.jpg);
+	background-size: 1000px;*/
     width: 50vw;
     color: white;
     height: 50vh;
     text-align: center;
-}
-
-.first-tile {
-/*    display: flex;
-    align-items: center;
-    justify-content: center;*/
 }
 
 #contact-wrapper {
