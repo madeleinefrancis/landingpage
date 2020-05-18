@@ -1,0 +1,96 @@
+@font-face {
+  font-family:"DitaSweet";
+  src: url("assets/Dita-Sweet.otf") format("truetype");
+}
+
+@font-face {
+  font-family:"SilkSerif";
+  src: url("assets/SilkSerif-Medium.ttf") format("truetype");
+}
+
+:root {
+	--summer-green: #8eb8a2;
+	--bay-leaf: #83b195;
+	--waterloo: #8180a0;
+	--kimberly: #7f7ca7;
+	--tall-poppy: #bb2531;
+	--cadillac: #b65066;
+	--tana: #d8d9ba;
+	--chino: #cecba2;
+}
+
+html, body {
+	height: 100%;
+	background-color: #bdafb0;
+    font-family: SilkSerif;
+}
+
+.hidden {
+	display: none;
+}
+
+.active {
+
+}
+
+.title {
+	
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+	flex-direction: column;
+}
+
+.content {
+    height: 100%;
+    margin-top: 75px;
+}
+
+#content-wrapper {
+	position: relative;
+	background-image: url(assets/IMG_0551.jpg);
+	background-size: 1000px;
+    width: 50vw;
+    color: white;
+    height: 50vh;
+    text-align: center;
+}
+
+.first-tile {
+/*    display: flex;
+    align-items: center;
+    justify-content: center;*/
+}
+
+#contact-wrapper {
+	text-align: center;
+    margin-top: -18px;
+    z-index: 100;
+    font-size: 26px;
+    color: white;
+}
+
+#next-button-wrapper {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    right: 20px;
+    border: 1px solid white;
+    padding: 5px;
+    font-weight: 800;
+}
+
+#next-button {
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    right: 20px;
+    border: 1px solid white;
+    padding: 5px;
+    font-weight: 800;	
+}
+
