@@ -322,4 +322,51 @@ html, body {
 
   #contact-wrapper {
     font-size: 18px;
+  }
+
+  .sidebar {
+      background: unset;
+      height: 50px;
+      display: flex;
+      border-bottom: none;
+      width: 100%;
+  }
+
+  .menu-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 0px;
+  }
+
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .about-text-wrapper {
+    width: 70vw;
+  }
+
+  iframe {
+    max-width: 330px;
+    max-height: 214px;
+  }
+
+  .content-wrapper.videos {
+    margin-bottom: 50px;
+  }
+
+  .container {
+    width: 93vw;
+  }
+
+  .gallery-wrapper {
+    margin-bottom: 50px;
+  }
+
+  .column img {
+    max-width: 52px;
+  }
+
 }

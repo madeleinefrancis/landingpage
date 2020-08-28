@@ -1,82 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>can i help you?</title>
+		<title>Madeleine Francis</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
-		<link rel="icon" href="assets/eye.ico">
+		<link rel="icon" href="assets/DSC_3792.ico">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	</head>
 	<body>
-		<div class="sun-back">
-			<div class="dot-rest dot"></div>
-		</div>
-		<div id="sun" class="sun-one">
-		 	<div id="dot1" class="dot" onclick="moveMenu(event)"></div>
-		 	<div id="dot2" class="dot" onclick="moveMenu(event)"></div>
-		 	<div id="dot3" class="dot" onclick="moveMenu(event)"></div>
-		</div>
 		<div class="page-wrapper">
-			<div id="content-wrapper">
-				<div id="first-tile" class="content active">
-					Web designer and programmer
-				</div>
-				<div id="provide-tile" class="hidden content">
-					I provide <br>
-					unique, highly custom websites,<br>
-					with integrations and hosting, <br>
-					for the best price possible
-				</div>
-				<div id="likes-tile" class="hidden content">
-					emphasis on aesthetics, <br>
-					keeping it fresh <br>
-				</div>
-				<div id="contact-tile" class="hidden content">
-					reach me at <br>
-					contact@madeleinefrancis.com
+			<div class="sidebar">
+				<div class="menu-wrapper">
+					<div class="menu-item current">
+						<a href="index.html"> home </a>
+					</div>
+					<div class="menu-item">
+						<a href="about.html"> about </a>
+					</div>
+					<div class="menu-item">
+						<a href="gallery.html"> gallery </a>
+					</div>
+					<div class="menu-item">
+						<a href="contact.html"> contact </a>
+					</div>
 				</div>
 			</div>
-			<div id="contact-wrapper">
-				reach me at <br>
-				contact@madeleinefrancis.com
+			<div class="content-wrapper videos">
+				<div class="title">
+					Madeleine Francis
+				</div>
+				<div class="video-wrapper">
+					<iframe src="https://player.vimeo.com/video/451597928" width="640" height="427" 	frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+				<div class="video-wrapper">
+					<iframe src="https://player.vimeo.com/video/452461167" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+				<div class="video-wrapper">
+				<iframe src="https://player.vimeo.com/video/452462419" width="640" height="397" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-		function moveMenu(e) {
-			var curTile = document.getElementsByClassName("active")[0];
-			curTile.classList.add("hidden");
-			curTile.classList.remove("active");
-
-			var nextID = curTile.id == "first-tile" ? "provide-tile" : 
-			 curTile.id == "provide-tile" ? "likes-tile" :
-			 								"first-tile";
-
-			var nextSun = curTile.id == "first-tile" ? "sun-two" : 
-			 curTile.id == "provide-tile" ? "sun-three" :
-			 								"sun-one";
-
-			var sun = document.getElementById("sun");
-			sun.classList.remove("sun-one");
-			sun.classList.remove("sun-two");
-			sun.classList.remove("sun-three");
-			
-			sun.classList.add(nextSun)
-
-			var nextTile = document.getElementById(nextID);
-			nextTile.classList.remove("hidden");
-			nextTile.classList.add("active");
-		}
-
-		function nextTile() {
-			var curTile = document.getElementsByClassName("active")[0];
-			curTile.classList.add("hidden");
-			curTile.classList.remove("active");
-			var nextID = curTile.id == "first-tile" ? "provide-tile" : 
-						 curTile.id == "provide-tile" ? "likes-tile" :
-						 								"first-tile";
-			var nextTile = document.getElementById(nextID);
-			nextTile.classList.remove("hidden");
-			nextTile.classList.add("active");
-		}
 	</script>
 </html>
