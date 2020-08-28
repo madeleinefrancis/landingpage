@@ -8,13 +8,11 @@
 		<script type="text/javascript">
 			function myFunction(imgs) {
 			  // Get the expanded image
-			  var expandImg = document.getElementById("expandedImg");
-			  // Get the image text
-			  var imgText = document.getElementById("imgtext");
-			  // Use the same src in the expanded image as the image being clicked on from the grid
-			  expandImg.src = imgs.src;
-			  // Show the container element (hidden with CSS)
-			  expandImg.parentElement.style.display = "flex";
+			  // var expandImg = document.getElementById("expandedImg");
+			  // // Get the image text
+			  // var imgText = document.getElementById("imgtext");
+			  // // Use the same src in the expanded image as the image being clicked on from the grid
+			  // expandImg.src = imgs.src;
 			}
 		</script>
 	</head>
@@ -45,26 +43,36 @@
 				<!-- The grid: four columns -->
 				<div class="row">
 				  <div class="column">
+				  	<a href="http://madeleinefrancis.com/gallery/cropped_3792.jpg" target="_blank">
 				    <img src="gallery/cropped_3792.jpg" onclick="myFunction(this);">
+				  	</a>
 				  </div>
 				  <div class="column">
-				    <img src="gallery/cropped_3613.jpg" onclick="myFunction(this);">
+				  	<a href="http://madeleinefrancis.com/gallery/cropped_3613.jpg" target="_blank">
+					    <img src="gallery/cropped_3613.jpg" onclick="myFunction(this);">
+				  	</a>
 				  </div>
 				  <div class="column">
-				    <img src="gallery/DSC_3586-smallCropped.jpg" onclick="myFunction(this);">
+				  	<a href="http://madeleinefrancis.com/gallery/DSC_3586-smallCropped.jpg" target="_blank">
+					    <img src="gallery/DSC_3586-smallCropped.jpg" onclick="myFunction(this);">
+				  	</a>
 				  </div>
   				  <div class="column">
-				    <img src="gallery/DSC_3640Cropped.JPG" onclick="myFunction(this);">
+				    <a href="http://madeleinefrancis.com/gallery/DSC_3640Cropped.jpg" target="_blank">
+					    <img src="gallery/DSC_3640Cropped.jpg" onclick="myFunction(this);">
+				    </a>
 				  </div>
   				  <div class="column">
-				    <img src="gallery/DSC_3719Cropped.JPG" onclick="myFunction(this);">
+  				  	<a href="http://madeleinefrancis.com/gallery/DSC_3719Cropped.jpg" target="_blank">
+					    <img src="gallery/DSC_3719Cropped.jpg" onclick="myFunction(this);">
+  				  	</a>
 				  </div>
 				</div>
 
 				<!-- The expanding image container -->
 				<div class="container">
 				  <!-- Expanded image -->
-				  <img id="expandedImg" style="width:100%">
+				  <div><img id="expandedImg" style="width:100%"></div>
 
 				  <!-- Image text -->
 				  <div id="imgtext"></div>
