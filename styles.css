@@ -1,7 +1,175 @@
-/*@font-face {
-  font-family:"Manofa-Regular";
-  src: url("assets/Manofa-Regular.ttf") format("truetype");
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.resume-link {
+    padding: 10px 20px;
+    border: solid black 0.5px;
+    margin-bottom: 35px;
+    font-family: optimabold;
+}
+
+.resume-link:hover {
+  background: #c9ecd5;
+  cursor: pointer;
+}
+
+.menu-wrapper{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.sidebar {
+  width: 13%;
+  background: #d2d2d2;
+  border-right: solid black 2px;
+  height: 100%;
+  position: relative;
+}
+
+.video-wrapper{
+  margin-bottom: 30px;
+}
+
+.menu-item.current {
+    font-family: optimabold;
+    text-decoration: underline solid black;
+}
+
+/*.menu-item.current::before {
+    content: '\25CF';
+    margin-left: -13px;
 }*/
+
+.social-wrapper {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icon {
+    width: 37px;
+    margin-bottom: 6px;
+}
+
+.about-text-wrapper {
+    color: black;
+    width: 50vw;
+    text-align: center;
+}
+
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    overflow: auto;
+}
+
+.gallery-wrapper {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+.contact-wrapper {
+    text-align: center;
+    font-size: 22px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  cursor: pointer;
+  max-width: 140px;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  position: relative;
+  display: none;
+  width: 50vw;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+@font-face {
+    font-family: 'optimamedium';
+    src: url('assets/optima_medium-webfont.woff2') format('woff2'),
+         url('assets/optima_medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'optimabold';
+    src: url('assets/optima_b-webfont.woff2') format('woff2'),
+         url('assets/optima_b-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'optimanormal';
+    src: url('assets/optima-webfont.woff2') format('woff2'),
+         url('assets/optima-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'manofaregular';
@@ -14,8 +182,9 @@
 
 html, body {
 	height: 100%;
-	background-color: #bdafb0;
-    font-family: manofaregular;
+	background-color: #fdfbfa;
+  font-family: optimanormal;
+  margin: 0px;
 }
 
 .dot{
@@ -63,15 +232,28 @@ html, body {
     position:absolute;
 }
 
+.menu-item {
+    font-size: smaller;
+    margin: 9px;
+}
+
+.title {
+  font-size: 29px;
+  margin-top: 75px;
+  margin-bottom: 50px;
+  font-family: optimamedium;
+  border-bottom: black solid 1px;
+}
+
 #sun{
 	display:inline-block;
-    width: 60px;
-    height: 60px;
-    position:absolute;
-    top:50px;
-    left:50px;
-    transition: transform 1s;
-    transition-timing-function: ease-in;
+  width: 60px;
+  height: 60px;
+  position:absolute;
+  top:50px;
+  left:50px;
+  transition: transform 1s;
+  transition-timing-function: ease-in;z
 }
 
 .sun-one {
@@ -91,16 +273,14 @@ html, body {
 }
 
 .page-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-	flex-direction: column;
+  display: flex;
+  height: 100%;
+  position: relative;
 }
 
 .content {
-    height: 100%;
-    margin-top: 75px;
+  height: 100%;
+  margin-top: 75px;
 }
 
 @keyframes textAppear {
@@ -118,7 +298,7 @@ html, body {
 #content-wrapper {
 	position: relative;
     width: 50vw;
-    color: white;
+    /*color: white;*/
     height: 50vh;
     text-align: center;
 	animation-name: textAppear;
@@ -130,7 +310,7 @@ html, body {
     margin-top: -18px;
     z-index: 100;
     font-size: 20px;
-    color: white;
+    /*color: white;*/
 	animation-name: textAppear;
   	animation-duration: 1.5s;
 }
